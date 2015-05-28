@@ -2,7 +2,10 @@ cmake_minimum_required (VERSION 2.8)
 
 project (OpenGLProject)
 
-SET(CMAKE_CXX_COMPILER  "/usr/bin/clang++")
+option(USE_CLANG "build application with clang" OFF) # OFF is the default
+if(USE_CLANG)
+    SET(CMAKE_CXX_COMPILER  "/usr/bin/clang++")
+endif(USE_CLANG)
 
 add_definitions(-std=c++11 -O2 -Wall -Wextra -pedantic)
 
