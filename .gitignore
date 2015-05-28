@@ -1,0 +1,7 @@
+Debug
+Release
+*.o
+makefile
+.project
+.cproject
+OpenGLProjekt.config
