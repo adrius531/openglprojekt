@@ -63,20 +63,20 @@ int main(){
 	glEnable(GL_TEXTURE_2D);
 
 	//Shader Program erzeugen
-	GLint shaderProgram = loadShader("Shader/normalmapping.vs", "Shader/normalmapping.fs");
-	GLint simpleShader = loadShader("Shader/simple.vs", "Shader/simple.fs");
-	GLint reliefShader = loadShader("Shader/reliefmapping.vs", "Shader/reliefmapping.fs");
-	GLint tesselationShader = loadShader("Shader/tesselation.vs", "Shader/tesselation.fs");
+	GLint shaderProgram = loadShader("../Shader/normalmapping.vs", "../Shader/normalmapping.fs");
+	GLint simpleShader = loadShader("../Shader/simple.vs", "../Shader/simple.fs");
+	GLint reliefShader = loadShader("../Shader/reliefmapping.vs", "../Shader/reliefmapping.fs");
+	GLint tesselationShader = loadShader("../Shader/tesselation.vs", "../Shader/tesselation.fs");
 	cout << "shader position: "<< shaderProgram << endl;
 	cout << "shader position: "<< simpleShader << endl;
 	//Primitve erzeugen
 	GameObject *sphere2;
-	sphere2 = new GameObject("Models/sphere2.obj", "Models/cobblestone1.jpg", "Models/cobblestone_displace.png", tesselationShader, "Sphere2");
+	sphere2 = new GameObject("../Models/sphere2.obj", "../Models/cobblestone1.jpg", "../Models/cobblestone_displace.png", tesselationShader, "Sphere2");
 	sphere2->setProjection(fov, ratio, near, far);
 	sphere2->translate(vec3(-3.0f, 0.0f, 2.0f));
 
 	GameObject *sphere;
-	sphere = new GameObject("Models/sphere2.obj", "Models/wood_texture.jpg", "Models/wood_normalmap.jpg", tesselationShader, "Sphere");
+	sphere = new GameObject("../Models/sphere2.obj", "../Models/wood_texture.jpg", "../Models/wood_normalmap.jpg", tesselationShader, "Sphere");
 	sphere->setProjection(fov, ratio, near, far);
 	sphere->translate(vec3(0.0f, 2.0f, -1.0f));
 /*
