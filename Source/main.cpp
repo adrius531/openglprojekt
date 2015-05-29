@@ -73,15 +73,15 @@ int main(){
 	cout << "shader position: "<< shaderProgram << endl;//
 	cout << "shader position: "<< simpleShader << endl;
 	//Primitve erzeugen
-//	GameObject *sphere2;
-//	sphere2 = new GameObject("../Models/sphere2.obj", "../Models/cobblestone1.jpg", "../Models/cobblestone_displace.png", tesselationShader, "Sphere2");
-//	sphere2->setProjection(fov, ratio, near, far);
-//	sphere2->translate(vec3(-3.0f, 0.0f, 2.0f));
-//
-//	GameObject *sphere;
-//	sphere = new GameObject("../Models/sphere2.obj", "../Models/wood_texture.jpg", "../Models/wood_normalmap.jpg", "../Models/wood_height.jpg", reliefShader, "Sphere");
-//	sphere->setProjection(fov, ratio, near, far);
-//	sphere->translate(vec3(0.0f, 2.0f, -1.0f));
+	GameObject *sphere2;
+	sphere2 = new GameObject("../Models/sphere2.obj", "../Models/cobblestone1.jpg", "../Models/cobblestone_displace.png", tesselationShader, "Sphere2");
+	sphere2->setProjection(fov, ratio, near, far);
+	sphere2->translate(vec3(-3.0f, 0.0f, 2.0f));
+
+	GameObject *sphere;
+	sphere = new GameObject("../Models/sphere2.obj", "../Models/wood_texture.jpg", "../Models/wood_normalmap.jpg", "../Models/wood_height.jpg", reliefShader, "Sphere");
+	sphere->setProjection(fov, ratio, near, far);
+	sphere->translate(vec3(0.0f, 2.0f, -1.0f));
 /*
 	GameObject *cube;
 	cube = new GameObject("Models/kubus.obj", "Models/wood_texture.jpg", "Models/wood_normalmap.jpg", "Models/wood_height.jpg", tesselationShader, "Cube");
@@ -89,8 +89,8 @@ int main(){
 	cube->translate(vec3(2.0f, 0.0f, -3.0f));
 */
 	vector<GameObject*> gameObjects;
-//	gameObjects.push_back(sphere2);
-//	gameObjects.push_back(sphere);
+	gameObjects.push_back(sphere2);
+	gameObjects.push_back(sphere);
 
 	//gameObjects.push_back(cube);
 	Game game = Game(gameObjects, window, HEIGHT, WIDTH, lightPos);

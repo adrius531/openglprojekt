@@ -20,6 +20,9 @@ include_directories(${OPENGL_INCLUDE_DIR})
 # GLFW
 find_package(PkgConfig REQUIRED)
 pkg_search_module(GLFW REQUIRED glfw3)
+if(NOT GLFW_FOUND)
+    message(FATAL_ERROR "GLFW not found")
+endif(NOT GLFW_FOUND)
 include_directories(${GLFW_INCLUDE_DIRS})
 #target_link_libraries(${PROJECT_NAME} ${GLFW_LIBRARIES})
 
